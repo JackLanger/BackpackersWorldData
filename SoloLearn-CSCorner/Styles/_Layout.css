@@ -19,6 +19,16 @@
     justify-content: center;
     margin: 2%;
     margin-top: 100px;
+    transition-delay: 0.5s;
+}
+
+    .country-container:hover > .country-content-container {
+        transition-delay: 0.5s;
+        display: initial;
+    }
+
+.country-content-container {
+    display: none;
 }
 
 .country-flag-container {
@@ -45,6 +55,7 @@
     text-align: center;
     color: #4b6584;
 }
+
 
 .exchange-rate-container {
     font-weight: bold;
