@@ -283,12 +283,13 @@ function buildUiBase(country) {
     //assign data
     name.innerText = country.name;
     region.innerText = "Region: " + country.region;
-    customElement.style.backgroundImage = "url("+country.flag+")";
+    flagContainer.style.backgroundImage = "url(" + country.flag + ")";
+    //flagContainer.style.backgroundSize = "contain";
 
     countryDiv.appendChild(flagContainer);
-    flagContainer.appendChild(customElement);
-    customElement.appendChild(name);
-    customElement.appendChild(region);
+    //flagContainer.appendChild(customElement);
+    flagContainer.appendChild(name);
+    flagContainer.appendChild(region);
 }
 
 /**

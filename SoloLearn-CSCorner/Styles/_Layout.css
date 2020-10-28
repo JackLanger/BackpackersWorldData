@@ -116,17 +116,22 @@
     }
 /*flag container for flag cards holds the flag as background do not chang background!*/
 .base-flag {
-    background-size: contain;
-    width: 300px;
-    height: 300px;
+    background-size:cover;
     margin: 10px;
-    padding: 10px;
+    height: 250px;
+    width:450px;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-align:center;
+    border-radius:5px;
 }
 /*the layover container for flag cards*/
 .base-custom {
 }
 /*header for the flag cards*/
 .base-name {
+    opacity:1;
 }
 /*the region name on the flag cards*/
 .base-region {
