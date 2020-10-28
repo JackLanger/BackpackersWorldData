@@ -67,8 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Html\CScorner.html" />
-    <Content Include="JS\JScorner.js" />
+    <Content Include="Html\main.html" />
+    <Content Include="JS\JSDAL.js" />
     <Content Include="Styles\_Layout.css" />
     <Content Include="Web.config" />
   </ItemGroup>

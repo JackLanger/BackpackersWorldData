@@ -7,8 +7,10 @@
     color: #d1d8e0;
     font-family: Tahoma, Geneva, sans-serif;
 }
-
+/* main container defines the look of the page*/
 .country-container {
+    display: flex;
+    flex-flow: wrap row;
     background-color: #4b6584;
     padding: 15px;
     width: 100%;
@@ -28,7 +30,7 @@
     }
 
 .country-content-container {
-    display: none;
+    display: initial;
 }
 
 .country-flag-container {
@@ -62,7 +64,7 @@
 }
 
 .exchange-rate {
-    display: none;
+    display: inherit;
 }
 
 .c-timezone {
@@ -112,3 +114,20 @@
         color: #333;
         cursor: pointer;
     }
+/*flag container for flag cards holds the flag as background do not chang background!*/
+.base-flag {
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+}
+/*the layover container for flag cards*/
+.base-custom {
+}
+/*header for the flag cards*/
+.base-name {
+}
+/*the region name on the flag cards*/
+.base-region {
+}
