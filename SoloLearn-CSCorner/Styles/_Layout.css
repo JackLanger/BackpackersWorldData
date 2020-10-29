@@ -1,34 +1,27 @@
 ﻿body {
-    background: #d1d8e0;
+    background: #1e272e;
     margin: 0;
     padding: 0;
     color: #d1d8e0;
     font-family: Tahoma, Geneva, sans-serif;
+    display:grid;
+    align-content:center;
 }
 /* main container defines the look of the page*/
 .country-container {
     display: flex;
     flex-flow: wrap row;
-    background-color: #4b6584;
+    background-color: #485460;
     padding: 15px;
-    width: 100%;
+    width: 75%;
     border-radius: 5px;
     overflow: hidden;
     word-wrap: break-word;
     word-break: break-word;
     justify-content: center;
-    margin: 2%;
+    justify-self:center;
     margin-top: 100px;
     transition-delay: 0.5s;
-}
-
-    .country-container:hover > .country-content-container {
-        transition-delay: 0.5s;
-        display: initial;
-    }
-
-.country-content-container {
-    display: initial;
 }
 
 .country-flag-container {
@@ -48,12 +41,12 @@
 .c-name {
     font-weight: 600;
     font-size: 24px;
-    background-color: #d1d8e0;
+    background-color: #d2dae2;
     padding: 10px;
     width: 85%;
     border-radius: 5px;
     text-align: center;
-    color: #4b6584;
+    color: #485460;
 }
 
 
@@ -72,7 +65,7 @@
 .country-search {
     position: fixed;
     top: 10px;
-    background-color: #d1d8e0;
+    background-color: #1e272e;
     padding: 25px;
     text-align: center;
     width: 100%;
@@ -83,11 +76,11 @@
 }
 
 .exchange-Rate {
-    background-color: #ddd;
+    background-color: #d2dae2;
     border-radius: 5px;
     margin: 15px;
     padding: 10px;
-    color: #333;
+    color: #1e272e;
     font-weight: bold;
 }
 
@@ -95,7 +88,7 @@
     text-align: center;
     padding: 15px;
     margin: 10px;
-    background-color: #ddd;
+    background-color: #d2dae2;
     transition: 0.3s;
     height: 40px;
 }
@@ -110,10 +103,10 @@
     }
 
     .base-value button {
-        background-color: #ddd;
+        background-color: #d2dae2;
         border: none;
-        border-bottom: solid #333 1px;
-        color: #333;
+        border-bottom: solid #1e272e 1px;
+        color: #1e272e;
         cursor: pointer;
     }
 /*flag container for flag cards holds the flag as background do not chang background!*/
@@ -127,18 +120,42 @@
     word-break: break-word;
     text-align: center;
     border-radius: 5px;
+    transition: 0.3s;
 }
     .base-flag:hover {
         width: 446px;
         height: 244px;
         border: solid;
     }
+        .base-flag:hover > .base-name {
+            color: #1e272e;
+        }
 /*the layover container for flag cards*/
 .base-custom {
 }
 /*header for the flag cards*/
 .base-name {
+    transition:0.3s;
 }
 /*the region name on the flag cards*/
 .base-region {
+}
+
+
+@media only screen and (max-width:600px){
+    .country-container {
+        display: flex;
+        flex-flow: wrap row;
+        background-color: #485460;
+        padding: 15px;
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+        word-wrap: break-word;
+        word-break: break-word;
+        justify-content: center;
+        justify-self: center;
+        margin-top: 100px;
+        transition-delay: 0.5s;
+    }
 }
