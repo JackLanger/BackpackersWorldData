@@ -2,8 +2,6 @@
     background: #d1d8e0;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-flow: wrap row;
     color: #d1d8e0;
     font-family: Tahoma, Geneva, sans-serif;
 }
@@ -45,8 +43,8 @@
     display: flex;
     float: right;
     padding: 25px;
+    cursor: pointer;
 }
-
 .c-name {
     font-weight: 600;
     font-size: 24px;
@@ -57,6 +55,7 @@
     text-align: center;
     color: #4b6584;
 }
+
 
 
 .exchange-rate-container {
@@ -78,6 +77,9 @@
     text-align: center;
     width: 100%;
     opacity: 0.95;
+}
+#country_name{
+    opacity:1;
 }
 
 .exchange-Rate {
@@ -116,22 +118,26 @@
     }
 /*flag container for flag cards holds the flag as background do not chang background!*/
 .base-flag {
-    background-size:cover;
+    background-size: cover;
     margin: 10px;
     height: 250px;
-    width:450px;
+    width: 450px;
     overflow: hidden;
     word-wrap: break-word;
     word-break: break-word;
-    text-align:center;
-    border-radius:5px;
+    text-align: center;
+    border-radius: 5px;
 }
+    .base-flag:hover {
+        width: 446px;
+        height: 244px;
+        border: solid;
+    }
 /*the layover container for flag cards*/
 .base-custom {
 }
 /*header for the flag cards*/
 .base-name {
-    opacity:1;
 }
 /*the region name on the flag cards*/
 .base-region {

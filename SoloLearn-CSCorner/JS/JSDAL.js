@@ -34,7 +34,6 @@ function getCountryURL() {
             output = baseLink + input;
         }
 
-        $('#countries').empty();
         $('#country_name').val('');
         resolve(output);
     });
@@ -50,6 +49,12 @@ function getCountryURL() {
  */
 
 function getCountries(url) {
+
+    //clear content
+    $('#countries').empty();
+
+    //if the url gets back all build flags else get detail view
+
     if (url == 'https://restcountries.eu/rest/v2/all') {
         fetch(url).then(response => response.json()).then(data => {
             for (var key in data) {
@@ -261,9 +266,12 @@ function buildUiCountries(country,eur,usd,gbp) {
     createExParagraph(country, gbp, customExchangeRateDiv);
 }
 /**
+ * 
  * build flag buttons for UI 
+ * TODO: link Flagicons to filter using the country name
  * @param {any} country
  */
+
 function buildUiBase(country) {
 
     //divs
@@ -284,12 +292,23 @@ function buildUiBase(country) {
     name.innerText = country.name;
     region.innerText = "Region: " + country.region;
     flagContainer.style.backgroundImage = "url(" + country.flag + ")";
-    //flagContainer.style.backgroundSize = "contain";
+    flagContainer.style.cursor = "pointer";
+
+    // subscribe clickevent to flag
+
+    flagContainer.addEventListener('click', event => {
+        let baseURL = 'https://restcountries.eu/rest/v2/name/';
+        let url = baseURL + country.name;
+
+        getCountries(url);
+    });
+
+    // build flag 
 
     countryDiv.appendChild(flagContainer);
     //flagContainer.appendChild(customElement);
     flagContainer.appendChild(name);
-    flagContainer.appendChild(region);
+    //flagContainer.appendChild(region);
 }
 
 /**
