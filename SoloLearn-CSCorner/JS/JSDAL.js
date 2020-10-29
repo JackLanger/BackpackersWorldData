@@ -8,9 +8,7 @@
 
 function filterCountries() {
     getCountryURL()
-        .then(getCountries)
-        .then(data => {
-        });
+    .then(getCountries)
 }
 
 /**
@@ -64,26 +62,23 @@ function getCountries(url) {
     }
     else
     {
-    return new Promise((resolve, reject) => {
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                let eur = fetchExchangeRate('EUR');
-                let usd = fetchExchangeRate('USD');
-                let gbp = fetchExchangeRate('GBP');
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            let eur = fetchExchangeRate('EUR');
+            let usd = fetchExchangeRate('USD');
+            let gbp = fetchExchangeRate('GBP');
 
-                Promise.all([eur,usd,gbp])
-                    .then(([eurData, usdData, gbpData]) => {
-                    //specific country data as well as currencie data build the currency ui here! 
-                    for (var key in data) {
-                        //pass both data sets to the UI builder
-                        buildUiCountries(data[key], eurData, usdData, gbpData);
-                    }
-                });
-                resolve(data);
+            Promise.all([eur,usd,gbp])
+                .then(([eurData, usdData, gbpData]) => {
+                //specific country data as well as currencie data build the currency ui here! 
+                for (var key in data) {
+                    //pass both data sets to the UI builder
+                    buildUiCountries(data[key], eurData, usdData, gbpData);
+                }
             });
         });
-    }
+    };
 }
 
 
@@ -118,8 +113,6 @@ function fetchExchangeRate(currencyCode) {
         .catch(err => console.log(err));
     });
 }
-
-
 
 
 /**
