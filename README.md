@@ -2,7 +2,7 @@
 
 website for quickly acquiring vital travel information regarding exchange and countrie information. 
 
-<p>will add :</p>
+<p><strong>will add :</strong></p>
 -visa regulation
 -country infos
 -travel info
