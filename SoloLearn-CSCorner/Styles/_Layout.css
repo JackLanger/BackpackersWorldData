@@ -1,28 +1,55 @@
-﻿body {
-    background: #1e272e;
+body {
     margin: 0;
+    background-image: url('../media/rO3ciu.jpg');
     padding: 0;
     color: #d1d8e0;
     font-family: Tahoma, Geneva, sans-serif;
+    display: grid;
+    align-content: center;
     display:grid;
-    align-content:center;
+    
 }
+
 /* main container defines the look of the page*/
-.country-container {
+.country-Main-container {
     display: flex;
     flex-flow: wrap row;
-    background-color: #485460;
+    background-color: rgba(30,39,46,0.6);
     padding: 15px;
-    width: 75%;
+    width: 60%;
     border-radius: 5px;
     overflow: hidden;
     word-wrap: break-word;
     word-break: break-word;
     justify-content: center;
-    justify-self:center;
-    margin-top: 100px;
+    justify-self: center;
     transition-delay: 0.5s;
+    overflow: scroll;
+    max-height:400px;
 }
+.country-Main-container:hover >::-webkit-scrollbar-track{
+    display:block;
+}
+    .country-Main-container::-webkit-scrollbar-track {
+        
+        background-color: transparent;
+        border: none;
+        height: 0;
+    }
+
+    .country-Main-container::-webkit-scrollbar {
+        width: 7px;
+        background-color: transparent;
+        border:none;
+        height: 0;
+    }
+
+    .country-Main-container::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, rgba(30,39,46,0) 0%, rgba(210,218,226,1) 30%, rgba(210,218,226,1) 70%, rgba(30,39,46,0) 100%);
+        border-radius: 3px;
+        height: 0;
+    }
+
 
 .country-flag-container {
     width: 200px;
@@ -49,8 +76,6 @@
     color: #485460;
 }
 
-
-
 .exchange-rate-container {
     font-weight: bold;
 }
@@ -61,20 +86,37 @@
 
 .c-timezone {
 }
-
+article{
+    grid-row:1;
+    margin-left:auto;
+    margin-right:auto;
+    padding:50px;
+}
 .country-search {
-    position: fixed;
+    grid-row:2;
     top: 10px;
-    background-color: #1e272e;
-    padding: 25px;
+    background-color: rgba(30,39,46,0.6);
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: center;
     width: 100%;
     opacity: 0.95;
 }
 #country_name{
     opacity:1;
+    width:200px;
+    border-radius:25px;
+    height:33px;
+    font-size:15px;
+    text-align:center;
+    background-color: transparent;
+    color: #d2dae2;
+    /* border:2px solid #d2dae2; */
+    border: none;
 }
-
+.country-search > button{
+    cursor:pointer;
+}
 .exchange-Rate {
     background-color: #d2dae2;
     border-radius: 5px;
@@ -113,8 +155,8 @@
 .base-flag {
     background-size: cover;
     margin: 10px;
-    height: 250px;
-    width: 450px;
+    height: 150px;
+    width: 250px;
     overflow: hidden;
     word-wrap: break-word;
     word-break: break-word;
@@ -123,12 +165,11 @@
     transition: 0.3s;
 }
     .base-flag:hover {
-        width: 446px;
-        height: 244px;
-        border: solid;
+        filter: brightness(120%);
     }
         .base-flag:hover > .base-name {
             color: #1e272e;
+            filter: saturate(100%);
         }
 /*the layover container for flag cards*/
 .base-custom {
@@ -158,4 +199,9 @@
         margin-top: 100px;
         transition-delay: 0.5s;
     }
+}
+
+@keyframes fadeIn{
+    from{ opacity:0;}
+    to{ opacity:1;}
 }

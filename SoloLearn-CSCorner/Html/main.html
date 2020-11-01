@@ -4,23 +4,34 @@
     <title>Backpacker World</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../JS/JSDAL.js"></script>
+    <script src="../JS/animation.js"></script>
     <link href="../Styles/_Layout.css" rel="stylesheet" />
-
 </head>
 <body>
 
-    <div id="left"></div>
+    <article style="color:#ffffff">
+        <div>
+            <h1>Welcome to the Backpackers best friend</h1>
+             <span>you are looking for latest exchange rates? no problem just pick any country and get all the informations you want.</span>
+
+        </div>
+    </article>
+
     <div class="country-search">
         <strong>Country: </strong>
         <input placeholder="press submit to get all" type="text" id="country_name" />
         <button onclick="filterCountries()">submit</button>
     </div>
+    <br />
 
-    <div class="country-container" id="countries">
+    
+
+
+    <br/>
+    <div class="country-Main-container" id="countries" >
 
         Press the submit button to show all available countrys or insert the country name you are looking for in the country field.
     </div>
-    <div id="right"></div>
 </body>
 </html>
 

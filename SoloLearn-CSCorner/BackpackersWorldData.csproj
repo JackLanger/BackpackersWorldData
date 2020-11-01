@@ -68,7 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Html\main.html" />
+    <Content Include="JS\animation.js" />
     <Content Include="JS\JSDAL.js" />
+    <Content Include="media\corontown.jpg" />
+    <Content Include="media\DSCN2421.JPG" />
+    <Content Include="media\rO3ciu.jpg" />
     <Content Include="Styles\_Layout.css" />
     <Content Include="Web.config" />
   </ItemGroup>

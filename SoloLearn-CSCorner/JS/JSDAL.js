@@ -6,6 +6,8 @@
  * 
  * */
 
+window.onload = getCountries('https://restcountries.eu/rest/v2/all');
+
 function filterCountries() {
     getCountryURL()
     .then(getCountries)
@@ -16,7 +18,6 @@ function filterCountries() {
  * Get the user input from the search field and create the url for the getCountry Method
  * 
  * */
-
 function getCountryURL() {
 
     let baseLink = 'https://restcountries.eu/rest/v2/name/';
@@ -286,6 +287,10 @@ function buildUiBase(country) {
     region.innerText = "Region: " + country.region;
     flagContainer.style.backgroundImage = "url(" + country.flag + ")";
     flagContainer.style.cursor = "pointer";
+
+
+
+
 
     // subscribe clickevent to flag
 
