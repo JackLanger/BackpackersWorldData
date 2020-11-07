@@ -1,6 +1,6 @@
 # BackpackersWorldData
 
-website for quickly acquiring vital travel information regarding exchange and countrie information. Using api calls for retriving country data from <a href="www.Restcountries.eu">Restcountries.eu</a> as well as currency data from <a href="https://exchangeratesapi.io/">exchangeratesapi.io</a>
+website for quickly acquiring vital travel information regarding exchange and countrie information. Using api calls for retriving country data from <a href="https://restcountries.eu/">Restcountries.eu</a> as well as currency data from <a href="https://exchangeratesapi.io/">exchangeratesapi.io</a>
 
 
 <p><strong>will add :</strong></p>
